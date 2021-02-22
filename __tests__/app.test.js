@@ -345,6 +345,15 @@ describe('app routes', () => {
         .expect(200);
 
       expect(data.body).toEqual(expectation);
+
+      const allChar = await fakeRequest(app)
+        .get('/characters')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      const vanessa = allChar.body.find(char => char.name === 'Vanessa');
+
+      expect(vanessa).toEqual(expectation);
     });
 
   });
