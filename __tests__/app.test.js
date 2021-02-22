@@ -356,5 +356,37 @@ describe('app routes', () => {
       expect(vanessa).toEqual(expectation);
     });
 
+    test('removes a single character with given name', async () => {
+
+      const expectation =
+      {
+        name: 'Ariel',
+        owner_id: 1,
+        id: 1,
+        species: 'mythical being',
+        role: 'hero',
+        unique_power: 'enchanting singing voice',
+        movie: 'The Little Mermaid',
+        movie_year: 1989,
+        hand_drawn: true,
+        image: 'https://lumiere-a.akamaihd.net/v1/images/b_disneyprincess_updates_mobile_ariel_19273_ca84d9d1.jpeg?region=0,0,640,709',
+        gif: 'https://www.readunwritten.com/wp-content/uploads/ariel-gif.gif'
+      };
+
+      const data = await fakeRequest(app)
+        .delete('/characters/Ariel')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body).toEqual(expectation);
+
+      const noItem = await fakeRequest(app)
+        .get('/characters/Ariel')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(noItem.body).toEqual('');
+    });
+
   });
 });
