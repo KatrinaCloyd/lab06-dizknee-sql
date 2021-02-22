@@ -315,5 +315,37 @@ describe('app routes', () => {
 
       expect(data.body).toEqual(expectation);
     });
+
+    test('adds new character to list of characters', async () => {
+
+      const newEntry =
+      {
+        name: 'Vanessa',
+        species: 'mythical being',
+        role: 'villan',
+        unique_power: 'getting someone to marry her in less than 2 hours',
+        movie: 'The Little Mermaid',
+        movie_year: 1989,
+        hand_drawn: true,
+        image: 'https://static.wikia.nocookie.net/littlemermaid/images/7/7b/Vanessa_1_%28film%29.jpg',
+        gif: 'https://lh3.googleusercontent.com/proxy/NLvSpw1X4R2-1SbPryFRlGI5HN_RcBm4pL-PPaSKni1Kczem4TqV-lziKUS_4iVLELVCtbrvvT2oujmqMZEV1-LzgPNAXBInid_ziwCTJv-__8yyb2gkCQ'
+      };
+
+      const expectation =
+      {
+        ...newEntry,
+        id: 20,
+        owner_id: 1
+      };
+
+      const data = await fakeRequest(app)
+        .post('/characters')
+        .send(newEntry)
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body).toEqual(expectation);
+    });
+
   });
 });
