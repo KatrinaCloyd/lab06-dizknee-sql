@@ -388,5 +388,44 @@ describe('app routes', () => {
       expect(noItem.body).toEqual('');
     });
 
+    test('updates charactr in data set by id', async () => {
+
+      const charUpdate =
+      {
+        name: 'Vanessa',
+        owner_id: 1,
+        species: 'mythical being',
+        role: 'villan',
+        unique_power: 'enchanting singing voice',
+        movie: 'The Little Mermaid',
+        movie_year: 1989,
+        hand_drawn: true,
+        image: 'none',
+        gif: 'none here either'
+      };
+
+      const expectation =
+      {
+        ...charUpdate,
+        id: 20
+      };
+
+      const data = await fakeRequest(app)
+        .put('/characters/20')
+        .send(charUpdate)
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body).toEqual(expectation);
+
+      const updatedData = await fakeRequest(app)
+        .get('/characters/Vanessa')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(updatedData.body).toEqual(expectation);
+
+    });
+
   });
 });
