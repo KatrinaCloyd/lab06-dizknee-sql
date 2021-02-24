@@ -38,7 +38,7 @@ describe('app routes', () => {
           name: 'Ariel',
           owner_id: 1,
           id: 1,
-          species: 'mythical being',
+          species_type: 'mythical being',
           role: 'hero',
           unique_power: 'enchanting singing voice',
           movie: 'The Little Mermaid',
@@ -51,7 +51,7 @@ describe('app routes', () => {
           name: 'Yzma',
           owner_id: 1,
           id: 2,
-          species: 'human',
+          species_type: 'human',
           role: 'villan',
           unique_power: 'making potions',
           movie: 'The Emperor\'s New Groove',
@@ -64,7 +64,7 @@ describe('app routes', () => {
           name: 'Meeko',
           owner_id: 1,
           id: 3,
-          species: 'animal',
+          species_type: 'animal',
           role: 'sidekick',
           unique_power: 'eating',
           movie: 'Pocahontas',
@@ -77,7 +77,7 @@ describe('app routes', () => {
           name: 'The Mad Hatter',
           owner_id: 1,
           id: 4,
-          species: 'human',
+          species_type: 'human',
           role: 'sidekick',
           unique_power: 'delusionally happy',
           movie: 'Alice In Wonderland',
@@ -90,7 +90,7 @@ describe('app routes', () => {
           name: 'Flounder',
           owner_id: 1,
           id: 5,
-          species: 'talking animal',
+          species_type: 'talking animal',
           role: 'sidekick',
           unique_power: 'being a fish and a wet blanket at the same time',
           movie: 'The Little Mermaid',
@@ -103,7 +103,7 @@ describe('app routes', () => {
           name: 'Judy Hopps',
           owner_id: 1,
           id: 6,
-          species: 'talking animal',
+          species_type: 'talking animal',
           role: 'hero',
           unique_power: 'super hops',
           movie: 'Zootopia',
@@ -116,7 +116,7 @@ describe('app routes', () => {
           name: 'Ursula',
           owner_id: 1,
           id: 7,
-          species: 'mythical being',
+          species_type: 'mythical being',
           role: 'villan',
           unique_power: 'sea magic and binding contracts',
           movie: 'The Little Mermaid',
@@ -129,7 +129,7 @@ describe('app routes', () => {
           name: 'Snow White',
           owner_id: 1,
           id: 8,
-          species: 'human',
+          species_type: 'human',
           role: 'hero',
           unique_power: 'seeing the good in ANYONE',
           movie: 'Snow White and the Seven Dwarfs',
@@ -142,7 +142,7 @@ describe('app routes', () => {
           name: 'Evil Queen',
           owner_id: 1,
           id: 9,
-          species: 'human',
+          species_type: 'human',
           role: 'villan',
           unique_power: 'evil magic and an all knowing mirror',
           movie: 'Snow White and the Seven Dwarfs',
@@ -155,7 +155,7 @@ describe('app routes', () => {
           name: 'Pocahontas',
           owner_id: 1,
           id: 10,
-          species: 'human',
+          species_type: 'human',
           role: 'hero',
           unique_power: 'can paint with the colors of the wind',
           movie: 'Pocahontas',
@@ -168,7 +168,7 @@ describe('app routes', () => {
           name: 'Nakoma',
           owner_id: 1,
           id: 11,
-          species: 'human',
+          species_type: 'human',
           role: 'sidekick',
           unique_power: 'dissapproving and encouraging at the same time',
           movie: 'Pocahontas',
@@ -181,7 +181,7 @@ describe('app routes', () => {
           name: 'Maleficent',
           owner_id: 1,
           id: 12,
-          species: 'mythical being',
+          species_type: 'mythical being',
           role: 'villan',
           unique_power: 'curses and dragon form',
           movie: 'Sleeping Beauty',
@@ -194,7 +194,7 @@ describe('app routes', () => {
           name: 'Merida',
           owner_id: 1,
           id: 13,
-          species: 'human',
+          species_type: 'human',
           role: 'hero',
           unique_power: 'fearlessness',
           movie: 'Brave',
@@ -207,7 +207,7 @@ describe('app routes', () => {
           name: 'Diablo',
           owner_id: 1,
           id: 14,
-          species: 'animal',
+          species_type: 'animal',
           role: 'henchman',
           unique_power: 'spying',
           movie: 'Sleeping Beauty',
@@ -220,7 +220,7 @@ describe('app routes', () => {
           name: 'Belle',
           owner_id: 1,
           id: 15,
-          species: 'human',
+          species_type: 'human',
           role: 'hero',
           unique_power: 'obliviousness when reading',
           movie: 'Beauty and the Beast',
@@ -233,7 +233,7 @@ describe('app routes', () => {
           name: 'Shenzi, Banzai, and Ed',
           owner_id: 1,
           id: 16,
-          species: 'talking animal',
+          species_type: 'talking animal',
           role: 'henchman',
           unique_power: 'eating raw meat',
           movie: 'The Lion King',
@@ -246,7 +246,7 @@ describe('app routes', () => {
           name: 'Tinkerbell',
           owner_id: 1,
           id: 17,
-          species: 'magical being',
+          species_type: 'mythical being',
           role: 'sidekick',
           unique_power: 'speaking in jingles',
           movie: 'Peter Pan',
@@ -259,7 +259,7 @@ describe('app routes', () => {
           name: 'Kronk',
           owner_id: 1,
           id: 18,
-          species: 'human',
+          species_type: 'human',
           role: 'sidekick',
           unique_power: 'speaking squirrel',
           movie: 'The Emperor\'s New Groove',
@@ -272,7 +272,7 @@ describe('app routes', () => {
           name: 'Pascal',
           owner_id: 1,
           id: 19,
-          species: 'animal',
+          species_type: 'animal',
           role: 'sidekick',
           unique_power: 'changing color',
           movie: 'Tangled',
@@ -291,6 +291,35 @@ describe('app routes', () => {
       expect(data.body).toEqual(expectation);
     });
 
+    test('returns all sepcies', async () => {
+
+      const expectation = [
+        {
+          id: 1,
+          name: 'human'
+        },
+        {
+          id: 2,
+          name: 'animal'
+        },
+        {
+          id: 3,
+          name: 'talking animal'
+        },
+        {
+          id: 4,
+          name: 'mythical being'
+        },
+      ];
+
+      const data = await fakeRequest(app)
+        .get('/species')
+        .expect('Content-Type', /json/)
+        .expect(200);
+
+      expect(data.body).toEqual(expectation);
+    });
+
     test('returns a single character with given name', async () => {
 
       const expectation =
@@ -298,7 +327,7 @@ describe('app routes', () => {
         name: 'Ariel',
         owner_id: 1,
         id: 1,
-        species: 'mythical being',
+        species_type: 'mythical being',
         role: 'hero',
         unique_power: 'enchanting singing voice',
         movie: 'The Little Mermaid',
@@ -321,7 +350,7 @@ describe('app routes', () => {
       const newEntry =
       {
         name: 'Vanessa',
-        species: 'mythical being',
+        species_id: 4,
         role: 'villan',
         unique_power: 'getting someone to marry her in less than 2 hours',
         movie: 'The Little Mermaid',
@@ -331,9 +360,24 @@ describe('app routes', () => {
         gif: 'https://lh3.googleusercontent.com/proxy/NLvSpw1X4R2-1SbPryFRlGI5HN_RcBm4pL-PPaSKni1Kczem4TqV-lziKUS_4iVLELVCtbrvvT2oujmqMZEV1-LzgPNAXBInid_ziwCTJv-__8yyb2gkCQ'
       };
 
-      const expectation =
+      const expectation1 =
       {
         ...newEntry,
+        id: 20,
+        owner_id: 1
+      };
+
+      const expectation2 =
+      {
+        name: 'Vanessa',
+        species_type: 'mythical being',
+        role: 'villan',
+        unique_power: 'getting someone to marry her in less than 2 hours',
+        movie: 'The Little Mermaid',
+        movie_year: 1989,
+        hand_drawn: true,
+        image: 'https://static.wikia.nocookie.net/littlemermaid/images/7/7b/Vanessa_1_%28film%29.jpg',
+        gif: 'https://lh3.googleusercontent.com/proxy/NLvSpw1X4R2-1SbPryFRlGI5HN_RcBm4pL-PPaSKni1Kczem4TqV-lziKUS_4iVLELVCtbrvvT2oujmqMZEV1-LzgPNAXBInid_ziwCTJv-__8yyb2gkCQ',
         id: 20,
         owner_id: 1
       };
@@ -344,7 +388,7 @@ describe('app routes', () => {
         .expect('Content-Type', /json/)
         .expect(200);
 
-      expect(data.body).toEqual(expectation);
+      expect(data.body).toEqual(expectation1);
 
       const allChar = await fakeRequest(app)
         .get('/characters')
@@ -353,7 +397,7 @@ describe('app routes', () => {
 
       const vanessa = allChar.body.find(char => char.name === 'Vanessa');
 
-      expect(vanessa).toEqual(expectation);
+      expect(vanessa).toEqual(expectation2);
     });
 
     test('removes a single character with given name', async () => {
@@ -363,7 +407,7 @@ describe('app routes', () => {
         name: 'Ariel',
         owner_id: 1,
         id: 1,
-        species: 'mythical being',
+        species_id: 4,
         role: 'hero',
         unique_power: 'enchanting singing voice',
         movie: 'The Little Mermaid',
@@ -388,13 +432,13 @@ describe('app routes', () => {
       expect(noItem.body).toEqual('');
     });
 
-    test('updates charactr in data set by id', async () => {
+    test('updates character in data set by id', async () => {
 
       const charUpdate =
       {
         name: 'Vanessa',
         owner_id: 1,
-        species: 'mythical being',
+        species_id: 4,
         role: 'villan',
         unique_power: 'enchanting singing voice',
         movie: 'The Little Mermaid',
@@ -404,9 +448,24 @@ describe('app routes', () => {
         gif: 'none here either'
       };
 
-      const expectation =
+      const expectation1 =
       {
         ...charUpdate,
+        id: 20
+      };
+
+      const expectation2 =
+      {
+        name: 'Vanessa',
+        owner_id: 1,
+        species_type: 'mythical being',
+        role: 'villan',
+        unique_power: 'enchanting singing voice',
+        movie: 'The Little Mermaid',
+        movie_year: 1989,
+        hand_drawn: true,
+        image: 'none',
+        gif: 'none here either',
         id: 20
       };
 
@@ -416,14 +475,14 @@ describe('app routes', () => {
         .expect('Content-Type', /json/)
         .expect(200);
 
-      expect(data.body).toEqual(expectation);
+      expect(data.body).toEqual(expectation1);
 
       const updatedData = await fakeRequest(app)
         .get('/characters/Vanessa')
         .expect('Content-Type', /json/)
         .expect(200);
 
-      expect(updatedData.body).toEqual(expectation);
+      expect(updatedData.body).toEqual(expectation2);
 
     });
 

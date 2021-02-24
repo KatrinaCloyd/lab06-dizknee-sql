@@ -1,7 +1,7 @@
 const characters = [
   {
     name: 'Ariel',
-    species: 'mythical being',
+    species_id: 4,
     role: 'hero',
     unique_power: 'enchanting singing voice',
     movie: 'The Little Mermaid',
@@ -12,7 +12,7 @@ const characters = [
   },
   {
     name: 'Yzma',
-    species: 'human',
+    species_id: 1,
     role: 'villan',
     unique_power: 'making potions',
     movie: 'The Emperor\'s New Groove',
@@ -23,7 +23,7 @@ const characters = [
   },
   {
     name: 'Meeko',
-    species: 'animal',
+    species_id: 2,
     role: 'sidekick',
     unique_power: 'eating',
     movie: 'Pocahontas',
@@ -34,7 +34,7 @@ const characters = [
   },
   {
     name: 'The Mad Hatter',
-    species: 'human',
+    species_id: 1,
     role: 'sidekick',
     unique_power: 'delusionally happy',
     movie: 'Alice In Wonderland',
@@ -45,7 +45,7 @@ const characters = [
   },
   {
     name: 'Flounder',
-    species: 'talking animal',
+    species_id: 3,
     role: 'sidekick',
     unique_power: 'being a fish and a wet blanket at the same time',
     movie: 'The Little Mermaid',
@@ -56,7 +56,7 @@ const characters = [
   },
   {
     name: 'Judy Hopps',
-    species: 'talking animal',
+    species_id: 3,
     role: 'hero',
     unique_power: 'super hops',
     movie: 'Zootopia',
@@ -67,7 +67,7 @@ const characters = [
   },
   {
     name: 'Ursula',
-    species: 'mythical being',
+    species_id: 4,
     role: 'villan',
     unique_power: 'sea magic and binding contracts',
     movie: 'The Little Mermaid',
@@ -78,7 +78,7 @@ const characters = [
   },
   {
     name: 'Snow White',
-    species: 'human',
+    species_id: 1,
     role: 'hero',
     unique_power: 'seeing the good in ANYONE',
     movie: 'Snow White and the Seven Dwarfs',
@@ -89,7 +89,7 @@ const characters = [
   },
   {
     name: 'Evil Queen',
-    species: 'human',
+    species_id: 1,
     role: 'villan',
     unique_power: 'evil magic and an all knowing mirror',
     movie: 'Snow White and the Seven Dwarfs',
@@ -100,7 +100,7 @@ const characters = [
   },
   {
     name: 'Pocahontas',
-    species: 'human',
+    species_id: 1,
     role: 'hero',
     unique_power: 'can paint with the colors of the wind',
     movie: 'Pocahontas',
@@ -111,7 +111,7 @@ const characters = [
   },
   {
     name: 'Nakoma',
-    species: 'human',
+    species_id: 1,
     role: 'sidekick',
     unique_power: 'dissapproving and encouraging at the same time',
     movie: 'Pocahontas',
@@ -122,7 +122,7 @@ const characters = [
   },
   {
     name: 'Maleficent',
-    species: 'mythical being',
+    species_id: 4,
     role: 'villan',
     unique_power: 'curses and dragon form',
     movie: 'Sleeping Beauty',
@@ -133,7 +133,7 @@ const characters = [
   },
   {
     name: 'Merida',
-    species: 'human',
+    species_id: 1,
     role: 'hero',
     unique_power: 'fearlessness',
     movie: 'Brave',
@@ -144,7 +144,7 @@ const characters = [
   },
   {
     name: 'Diablo',
-    species: 'animal',
+    species_id: 2,
     role: 'henchman',
     unique_power: 'spying',
     movie: 'Sleeping Beauty',
@@ -155,7 +155,7 @@ const characters = [
   },
   {
     name: 'Belle',
-    species: 'human',
+    species_id: 1,
     role: 'hero',
     unique_power: 'obliviousness when reading',
     movie: 'Beauty and the Beast',
@@ -166,7 +166,7 @@ const characters = [
   },
   {
     name: 'Shenzi, Banzai, and Ed',
-    species: 'talking animal',
+    species_id: 3,
     role: 'henchman',
     unique_power: 'eating raw meat',
     movie: 'The Lion King',
@@ -177,7 +177,7 @@ const characters = [
   },
   {
     name: 'Tinkerbell',
-    species: 'magical being',
+    species_id: 4,
     role: 'sidekick',
     unique_power: 'speaking in jingles',
     movie: 'Peter Pan',
@@ -188,7 +188,7 @@ const characters = [
   },
   {
     name: 'Kronk',
-    species: 'human',
+    species_id: 1,
     role: 'sidekick',
     unique_power: 'speaking squirrel',
     movie: 'The Emperor\'s New Groove',
@@ -199,7 +199,7 @@ const characters = [
   },
   {
     name: 'Pascal',
-    species: 'animal',
+    species_id: 2,
     role: 'sidekick',
     unique_power: 'changing color',
     movie: 'Tangled',

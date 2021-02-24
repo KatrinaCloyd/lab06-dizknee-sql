@@ -16,11 +16,15 @@ async function run() {
                     id SERIAL PRIMARY KEY,
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
-                );           
+                );
+                CREATE TABLE species (
+                  id SERIAL PRIMARY KEY,
+                  name VARCHAR(512) NOT NULL
+              );           
                 CREATE TABLE characters (
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
-                    species VARCHAR(512) NOT NULL,
+                    species_id INTEGER NOT NULL REFERENCES species(id),
                     role VARCHAR(512) NOT NULL,
                     unique_power VARCHAR(512) NOT NULL,
                     movie VARCHAR(512) NOT NULL,
